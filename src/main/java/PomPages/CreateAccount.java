@@ -36,7 +36,6 @@ public class CreateAccount {
 	}
 
 	public void FillCreateAccountForm() {
-
 		// Generate customer details
 		CustomerDetails details = customerDetails.GenerateFormDeatails();
 

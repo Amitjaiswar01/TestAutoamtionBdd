@@ -13,13 +13,14 @@ import io.cucumber.java.en.When;
 
 public class CreateAnAccountFunctionality extends TestBase{
 
-	@After
+	/*@After
 	public void TearDown() {
 		Browser.QuitDriver();
-	}
+	}*/
 	
 	@Given("Navigate to link: https:\\/\\/magento.softwaretestingboard.com\\/")
 	public void navigate_to_link_https_magento_softwaretestingboard_com() {
+		InitializeScript();
 		Browser.Navigate(Urls.HomePage);
 	}
 
@@ -44,5 +45,6 @@ public class CreateAnAccountFunctionality extends TestBase{
 	public void user_data_should_be_created() {
 		String ExpectedUrl = Browser.CurrentUrl();
 		Assert.assertEquals("User has not successfully logged In", Urls.MyAccountUrl, ExpectedUrl);
+		TearDown();
 	}
 }

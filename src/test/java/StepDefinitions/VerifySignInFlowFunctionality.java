@@ -17,13 +17,14 @@ public class VerifySignInFlowFunctionality extends TestBase {
 	String EmailAddress;
 	String Password;
 	
-	@After
+	/*@After
 	public void TearDown() {
 		Browser.QuitDriver();
-	}
+	}*/
 	
 	@Given("Navigate the main link: https:\\/\\/magento.softwaretestingboard.com\\/")
 	public void navigate_the_main_link_https_magento_softwaretestingboard_com() {
+		InitializeScript();
 		Browser.Navigate(Urls.HomePage);
 	}
 	
@@ -82,5 +83,6 @@ public class VerifySignInFlowFunctionality extends TestBase {
 	@Then("Verify the user logged in successfully in session")
 	public void verify_the_user_logged_in_successfully_in_session() {
 		Assert.assertTrue("Current page is not a homepage", Home.IsCurrentPage());
+		TearDown();
 	}
 }

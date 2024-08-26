@@ -1,5 +1,6 @@
 package PomPages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import Utilies.Browser;
@@ -12,6 +13,7 @@ public class SignInPage {
 	private String _passwordFieldName = "login[password]";
 	private String _sendName = "send";
 	private String _createClassName = "create";
+	private String _unregisteredEleXpath = "//div[contains(text(), \"The account sign-in\")]"; 
 
 	// Constructor
 	public Browser browser;
@@ -41,5 +43,10 @@ public class SignInPage {
 
 	public String GetSignOutText() {
 		return browser.ElementByXpath("//span[contains(text(),'You are signed out')]").getText();
+	}
+	
+	public String GetUnregisteredText() {
+		browser.Wait.ElementIsVisible(By.xpath(_unregisteredEleXpath));
+		return browser.ElementByXpath(_unregisteredEleXpath).getText();
 	}
 }

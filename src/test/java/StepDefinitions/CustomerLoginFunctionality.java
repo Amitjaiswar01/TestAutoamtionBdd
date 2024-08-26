@@ -11,14 +11,15 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CustomerLoginFunctionality extends TestBase {
-
-	@After
+	
+	/*@After
 	public void TearDown() {
 		Browser.QuitDriver();
-	}
+	}*/
 
 	@Given("Navigate the link: https:\\/\\/magento.softwaretestingboard.com\\/")
 	public void navigate_the_link_https_magento_softwaretestingboard_com() {
+		InitializeScript();
 		Browser.Navigate(Urls.HomePage);
 	}
 
@@ -49,5 +50,6 @@ public class CustomerLoginFunctionality extends TestBase {
 	public void user_should_be_logged_in() {
 		String ExpectedUrl = Browser.CurrentUrl();
 		Assert.assertEquals("User has not successfully logged In", Urls.HomePage, ExpectedUrl);
+		TearDown();
 	}
 }

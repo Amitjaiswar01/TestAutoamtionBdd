@@ -15,7 +15,9 @@ public class TestBase {
 	public HeaderSection Header;
 	public HomePage Home;
 
-	public TestBase() {
+	public TestBase() {}
+
+	public void ObjectCreation() {
 		// Initialize Browser once
 		Browser = new Browser();
 
@@ -28,5 +30,13 @@ public class TestBase {
 		Sign = new SignInPage(Browser);
 		Header = new HeaderSection(Browser);
 		Home = new HomePage(Browser);
+	}
+
+	public void InitializeScript() {
+		ObjectCreation();
+	}
+	
+	public void TearDown() {
+		Browser.Driver.quit();
 	}
 }
