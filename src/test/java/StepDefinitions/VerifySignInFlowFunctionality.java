@@ -6,7 +6,6 @@ import org.junit.Assert;
 
 import Utilies.TestBase;
 import Utilies.Urls;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,11 +15,6 @@ public class VerifySignInFlowFunctionality extends TestBase {
 
 	String EmailAddress;
 	String Password;
-	
-	/*@After
-	public void TearDown() {
-		Browser.QuitDriver();
-	}*/
 	
 	@Given("Navigate the main link: https:\\/\\/magento.softwaretestingboard.com\\/")
 	public void navigate_the_main_link_https_magento_softwaretestingboard_com() {

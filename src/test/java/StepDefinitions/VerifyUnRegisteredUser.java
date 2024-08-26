@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import Utilies.Messages;
 import Utilies.TestBase;
 import Utilies.Urls;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,10 +13,6 @@ import io.cucumber.java.en.When;
 
 public class VerifyUnRegisteredUser extends TestBase {
 
-	/*@After
-	public void TearDown() {
-		Browser.QuitDriver();
-	}*/
 	@Given("Navigate to magneto homepage link")
 	public void navigate_to_magneto_homepage_link() {
 		InitializeScript();

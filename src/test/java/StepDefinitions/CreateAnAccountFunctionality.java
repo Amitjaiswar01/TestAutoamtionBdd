@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 
 import Utilies.TestBase;
 import Utilies.Urls;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,11 +12,6 @@ import io.cucumber.java.en.When;
 
 public class CreateAnAccountFunctionality extends TestBase{
 
-	/*@After
-	public void TearDown() {
-		Browser.QuitDriver();
-	}*/
-	
 	@Given("Navigate to link: https:\\/\\/magento.softwaretestingboard.com\\/")
 	public void navigate_to_link_https_magento_softwaretestingboard_com() {
 		InitializeScript();
